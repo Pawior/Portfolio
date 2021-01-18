@@ -98,15 +98,7 @@ section img {
   pointer-events: none;
 }
 
-article {
-  width: 100vw;
-  height: 100vh;
-  z-index: 3;
-  margin: 0;
-  padding: 0;
-}
-
-article .photo {
+#photo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,8 +110,176 @@ article .photo {
           align-items: center;
 }
 
-article .photo img {
+#photo img {
   width: 20%;
   height: 20%;
+}
+
+@-webkit-keyframes typing {
+  0% {
+    width: 0%;
+    text-align: center;
+  }
+  100% {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+    text-align: center;
+  }
+  100% {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@-webkit-keyframes blink {
+  0%, 100% {
+    border-right: 2px solid transparent;
+  }
+  50% {
+    border-right: 2px solid #222;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-right: 2px solid transparent;
+  }
+  50% {
+    border-right: 2px solid #222;
+  }
+}
+
+article {
+  width: 100vw;
+  height: 40vh;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article .desc {
+  width: 100%;
+  font-size: 3vh;
+  text-align: center;
+  visibility: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+article .animated {
+  -webkit-animation: typing 5s 0s steps(62, start) forwards, blink 2s 0s steps(50, end) forwards;
+          animation: typing 5s 0s steps(62, start) forwards, blink 2s 0s steps(50, end) forwards;
+}
+
+.parallax {
+  background-image: url("img/parallax.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 30vh;
+}
+
+.projects {
+  width: 100vw;
+  height: 70vh;
+}
+
+.contact {
+  width: 100vw;
+  height: 70vh;
+}
+
+.contact .contactMe {
+  width: 100vw;
+  text-align: center;
+  position: relative;
+  font-size: 6vh;
+}
+
+.contact .contactMe:after {
+  border-bottom: solid 1px #7bcdeb;
+  width: 100vw;
+  height: 1vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+}
+
+.contact .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.contact .contactContainer i {
+  color: #495559;
+  font-size: 30vh;
+}
+
+.contact .contactContainer i:active {
+  -webkit-animation: bigger 1s 0s 1 normal forwards;
+          animation: bigger 1s 0s 1 normal forwards;
+}
+
+.biggerClass {
+  -webkit-animation: bigger 1s 0s 1 normal forwards;
+          animation: bigger 1s 0s 1 normal forwards;
+}
+
+@-webkit-keyframes bigger {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bigger {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */
