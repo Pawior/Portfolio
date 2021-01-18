@@ -1,0 +1,125 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Monda', sans-serif;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section h1 {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  font-weight: 700;
+  font-size: 20vh;
+  top: 0vh;
+  z-index: 2;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -webkit-animation-name: Hi;
+          animation-name: Hi;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes Hi {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Hi {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+section .sky {
+  background-image: url("img/sky.png");
+  background-size: 150%;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+section .bottom {
+  background-image: url("img/bottom2.png");
+  background-size: 150%;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 3;
+  -webkit-box-shadow: 0px -25px 15px -5px white inset;
+          box-shadow: 0px -25px 15px -5px white inset;
+}
+
+section .sun {
+  background-image: url("img/slonce.png");
+  background-size: 10%;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 2;
+  display: inline-block;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+
+article {
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+}
+
+article .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article .photo img {
+  width: 20%;
+  height: 20%;
+}
+/*# sourceMappingURL=style.css.map */
