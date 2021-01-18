@@ -153,17 +153,29 @@ article {
     }
 }
 .parallax{
-    background-image: url("img/parallax.jpg");
+    background-image: url("img/parallaxBlured.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     width: 100vw;
-    height: 30vh;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15vh;
+    font-family: 'Monda', sans-serif;
+    // color: rgb(206, 160, 35);
+    color: #EBDD21;
+    // color: #5EFC8D;
+    // color: #E2C044;
+    font-weight: 700;
 }
 .projects{
     width: 100vw;
     height: 70vh;
+    
+    
 }
 .contact{
     width: 100vw;
