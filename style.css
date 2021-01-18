@@ -243,7 +243,7 @@ article .animated {
   font-size: 30vh;
 }
 
-.contact .contactContainer i:active {
+.contact .contactContainer i:hover {
   -webkit-animation: bigger 1s 0s 1 normal forwards;
           animation: bigger 1s 0s 1 normal forwards;
 }
