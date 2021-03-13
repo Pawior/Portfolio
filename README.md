@@ -2,13 +2,10 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [How does it looks like?](#how-does-it-looks-like?)
 * [Technologies](#technologies)
 
 ## General info
-Just Portfoli :)
-## How does it looks like?
-![image](./img/preview.png)	
+Just Portfolio :)
 * Live update
 ## Technologies
 Project is created with:
