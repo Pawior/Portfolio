@@ -431,3 +431,39 @@ make it thinner, then set it to again wrap around the entire parent element.
   stroke-dashoffset: 0;
   stroke: #06d6a0;
 }
+.mailDiv {
+  display: flex;
+  flex-direction: column;
+  .mail {
+    font-size: 1.5vw;
+    text-align: center;
+    align-self: center;
+    visibility: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+.mailText {
+  visibility: visible !important;
+}
+.animated2 {
+  animation: typing 1s 0s steps(22, start) forwards,
+    blink 1s 0s steps(25, end) forwards;
+}
+
+@media screen and (max-width: 1200px) {
+  .bottom {
+    background-repeat: no-repeat;
+    height: 60vh;
+  }
+  .sky {
+    background-repeat: no-repeat;
+    height: 60vh;
+  }
+  .parallax {
+    text-align: center;
+  }
+  .mail {
+    font-size: 1.5rem !important;
+  }
+}

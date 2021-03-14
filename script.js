@@ -16,7 +16,7 @@ window.addEventListener("scroll", function () {
   sun.style.left = value * 0.6 + "px";
   sun.style.top = value * 1 + "px";
   bottom.style.bottom = value * 0.5 + "px";
-  text.style.top = value * 0.5 + "px";
+  text.style.top = value * 0.6 + "px";
   photo.style.top = value * 2 + "px";
   if (value > 300) {
     sun.style.visibility = "hidden";
@@ -65,36 +65,43 @@ $(window).on("scroll", function () {
 });
 
 var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+// var ctx = canvas.getContext("2d");
 
-function drawLine(x1, y1, x2, y2, ratio) {
-  ctx.fillRect(0, 0, 300, 300);
-  ctx.beginPath();
-  ctx.moveTo(x1, y1);
-  x2 = x1 + ratio * (x2 - x1);
-  y2 = y1 + ratio * (y2 - y1);
-  ctx.lineTo(x2, y2);
-  ctx.stroke();
-  ctx.fillStyle = "green";
-  ctx.fillRect(20, 10, 150, 100);
-  ctx.closePath();
+// function drawLine(x1, y1, x2, y2, ratio) {
+//   ctx.fillRect(0, 0, 300, 300);
+//   ctx.beginPath();
+//   ctx.moveTo(x1, y1);
+//   x2 = x1 + ratio * (x2 - x1);
+//   y2 = y1 + ratio * (y2 - y1);
+//   ctx.lineTo(x2, y2);
+//   ctx.stroke();
+//   ctx.fillStyle = "green";
+//   ctx.fillRect(20, 10, 150, 100);
+//   ctx.closePath();
 
-  // And if we intend to start new things after
-  // this, and this is part of an outline,
-  // we probably also want a ctx.closePath()
-}
+//   // And if we intend to start new things after
+//   // this, and this is part of an outline,
+//   // we probably also want a ctx.closePath()
+// }
 
-function animate(ratio) {
-  ratio = ratio || 0;
-  drawLine(0, 0, 300, 300, ratio);
-  if (ratio < 1) {
-    requestAnimationFrame(function () {
-      animate(ratio + 0.01);
-    });
-  }
-}
+// function animate(ratio) {
+//   ratio = ratio || 0;
+//   drawLine(0, 0, 300, 300, ratio);
+//   if (ratio < 1) {
+//     requestAnimationFrame(function () {
+//       animate(ratio + 0.01);
+//     });
+//   }
+// }
 
-animate();
+// animate();
+const mailDiv = document.querySelector(".mailDiv");
+const mailInput = document.querySelector(".mail");
+mailDiv.addEventListener("click", () => {
+  // mailInput.classList.add("mailText");
+  mailInput.classList.add("animated2");
+  mailInput.style.visibility = "visible";
+});
 
 // NIEUDANE NIE ZATRZYMANIE ANIMACJI HOVER
 
