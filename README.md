@@ -6,7 +6,7 @@
 
 ## General info
 Just Portfolio :)
-* Live update
+
 ## Technologies
 Project is created with:
 * HTML5
