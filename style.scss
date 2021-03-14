@@ -1,228 +1,433 @@
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Monda', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Monda", sans-serif;
 
+  overflow-x: hidden;
 }
-section{
-    position: relative;
-    height: 100vh;
+section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    font-weight: 700;
+    font-size: 20vh;
+    top: 0vh;
+    z-index: 2;
+    align-self: start;
+    justify-self: start;
+    animation-name: Hi;
+    animation-duration: 3s;
+  }
+  @keyframes Hi {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .sky {
+    background-image: url("img/sky.png");
+    background-size: 150%;
     width: 100vw;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1{
-        position: absolute;
-        z-index: 10;
-        color: white;
-        font-weight: 700;
-        font-size: 20vh;
-        top: 0vh;
-        z-index: 2;
-        align-self: start;
-        justify-self: start;
-        animation-name: Hi;
-        animation-duration: 3s;
-    }
-    @keyframes Hi {
-        0%{
-            opacity: 0;
-        }   
-        100%{
-            opacity: 1;
-        }     
-    }
-    
-    .sky{
-        background-image: url("img/sky.png");
-        background-size: 150%;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-    }
-    .bottom{
-        background-image: url("img/bottom2.png");
-        background-size: 150%;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        z-index: 3;
-        box-shadow: 0px -25px 15px -5px white inset;
-    }
-    // .bgPhoto{                                            OLD
-    //     background-image: url("img/bgDuze.jpg");
-    //     background-size: 100%;
-    //     width: 100vw;
-    //     height: 100vh;
-    //     background-repeat: no-repeat;
-    //     position: absolute;
-    //     z-index: 1;
-    // }
-    // .bgOver{
-    //     background-image: url("img/bgDuze.jpg");
-    //     background-size: 120%;
-    //     width: 100vw;
-    //     height: 100vh;
-    //     background-repeat: no-repeat;
-    //     position: absolute;
-    //     z-index: 2;
-    // }
-    
-    .sun{
-        background-image: url("img/slonce.png");
-        background-size: 10%;
-        width: 100vw;
-        height: 100vh;
-        background-repeat: no-repeat;
-        position: absolute;
-        z-index: 2;
-        display: inline-block;
-        
-        
-    }
-    img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        pointer-events: none;
-    }
-    
+    height: 100vh;
+    position: absolute;
+  }
+  .bottom {
+    background-image: url("img/bottom2.png");
+    background-size: 150%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    box-shadow: 0px -25px 15px -5px white inset;
+  }
+  // .bgPhoto{                                            OLD
+  //     background-image: url("img/bgDuze.jpg");
+  //     background-size: 100%;
+  //     width: 100vw;
+  //     height: 100vh;
+  //     background-repeat: no-repeat;
+  //     position: absolute;
+  //     z-index: 1;
+  // }
+  // .bgOver{
+  //     background-image: url("img/bgDuze.jpg");
+  //     background-size: 120%;
+  //     width: 100vw;
+  //     height: 100vh;
+  //     background-repeat: no-repeat;
+  //     position: absolute;
+  //     z-index: 2;
+  // }
+
+  .sun {
+    background-image: url("img/slonce.png");
+    background-size: 10%;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
 }
-#photo{
-        
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-        width: 20%;
-        height: 20%;
-    }
-    
+#photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 20%;
+    height: 20%;
+  }
 }
 @keyframes typing {
-    0% { width:0%; text-align: center}
-    100% { width:100%; text-align: center}
+  0% {
+    width: 0%;
+    text-align: center;
   }
+  100% {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 @keyframes blink {
-  0%,100% {
-    border-right:2px solid transparent;
+  0%,
+  100% {
+    border-right: 2px solid transparent;
   }
   50% {
-    border-right:2px solid #222;
+    border-right: 2px solid #222;
   }
 }
 article {
-    width: 100vw;
-    height: 40vh;
-    z-index: 3;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    
-    // background: linear-gradient(to bottom, #0a2a43, transparent);
-    .desc{
-        // font-family: 'Nanum Pen Script', cursive;
-        width: 100%;
-        font-size: 3vh;
-        text-align: center;
-        // animation: typing 5s 1s steps(62,start) forwards,
-        // blink 4s forwards;
-        visibility: hidden;
-        // animation: name duration timing-function delay iteration-count direction fill-mode;
-        white-space:nowrap;
-        overflow:hidden;
-    }
-    .animated {
-        animation: typing 5s 0s steps(62,start) forwards,
-                    blink 2s 0s steps(50, end) forwards;
-        
-        
-        
-    }
-   
-    canvas{
-        
-        
-    }
+  width: 100vw;
+  height: 40vh;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  // background: linear-gradient(to bottom, #0a2a43, transparent);
+  .desc {
+    // font-family: 'Nanum Pen Script', cursive;
+    width: 100%;
+    font-size: 3vh;
+    text-align: center;
+    // animation: typing 5s 1s steps(62,start) forwards,
+    // blink 4s forwards;
+    visibility: hidden;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .animated {
+    animation: typing 5s 0s steps(62, start) forwards,
+      blink 2s 0s steps(50, end) forwards;
+  }
+
+  canvas {
+  }
 }
-.parallax{
-    background-image: url("img/parallaxBlured.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+.parallax {
+  background-image: url("img/parallaxBlured.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15vh;
+  font-family: "Monda", sans-serif;
+  // color: rgb(206, 160, 35);
+  color: #ebdd21;
+  // color: #5EFC8D;
+  // color: #E2C044;
+  font-weight: 700;
+}
+.projects {
+  width: 100vw;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+
+  .weatherProject {
+    box-sizing: border-box;
+    background-image: url("img/previewWeather.png");
     background-size: cover;
-    background-attachment: fixed;
-    width: 100vw;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15vh;
-    font-family: 'Monda', sans-serif;
-    // color: rgb(206, 160, 35);
-    color: #EBDD21;
-    // color: #5EFC8D;
-    // color: #E2C044;
-    font-weight: 700;
-}
-.projects{
-    width: 100vw;
-    height: 70vh;
-    
-    
-}
-.contact{
-    width: 100vw;
-    height: 70vh;
-    
-    .contactMe{
-        width: 100vw;
+    width: 40%;
+    height: 80%;
+    border: 2px solid rgb(68, 64, 68);
+    position: relative;
+    .overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background: #ebdd21;
+      .divbuttonPlayer {
+        a {
+          .buttonPlayer {
+            background: rgb(3, 44, 59);
+          }
+        }
+      }
+      .textPlayer {
+        padding: auto;
         text-align: center;
-        position: relative;
-        font-size: 6vh;
+      }
     }
-    .contactMe:after{
-        border-bottom: solid 1px rgb(123, 205, 235) ;
-        width: 100vw;
-        height: 1vh;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        content:"";
+    &:hover .overlay {
+      opacity: 1;
+    }
+  }
 
-    }
-    .contactContainer{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        i{
-            color: #495559;
-            font-size: 30vh;
-            
+  .playerProject {
+    background-image: url("img/previewPlayer.png");
+    background-size: cover;
+    width: 40%;
+    height: 80%;
+    border: 2px solid rgb(68, 64, 68);
+    position: relative;
+    .overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background: #ebdd21;
+      .divbuttonPlayer {
+        a {
+          .buttonPlayer {
+            background: rgb(3, 44, 59);
+          }
         }
-       
-        i:hover{
-            animation: bigger 1s 0s 1 normal forwards; 
-        }
-        
+      }
+      .textPlayer {
+        padding: auto;
+        text-align: center;
+      }
     }
-
+    &:hover .overlay {
+      opacity: 1;
+    }
+    // &:hover .cr {
+    //   opacity: 0;
+    // }
+  }
 }
 
-.biggerClass{
-    animation: bigger 1s 0s 1 normal forwards; 
+.contact {
+  width: 100vw;
+  height: 70vh;
+
+  .contactMe {
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    font-size: 6vh;
+  }
+  .contactMe:after {
+    border-bottom: solid 1px rgb(123, 205, 235);
+    width: 100vw;
+    height: 1vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+  }
+  .contactContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    i {
+      color: #495559;
+      font-size: 30vh;
+    }
+
+    i:hover {
+      animation: bigger 1s 0s 1 normal forwards;
+    }
+  }
+}
+
+.biggerClass {
+  animation: bigger 1s 0s 1 normal forwards;
 }
 @keyframes bigger {
-    0% {transform: scale(1);}
-    50% {transform: scale(1.2);}
-    100% {transform: scale(1);}
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cr {
+  width: 200px;
+  padding: 0px;
+  position: absolute;
+  text-align: center;
+  color: #f0f0f0;
+  z-index: 10;
+
+  p {
+    color: black;
+    margin: 0;
+    font-size: 1.5rem;
+    overflow: hidden;
+  }
+}
+.cr-bottom.cr-right {
+  transform: rotate(-45deg);
+}
+.cr-bottom.cr-left {
+  transform: rotate(45deg);
+}
+.cr-black {
+  background-color: lightblue;
+}
+.cr-right {
+  right: -50px;
+}
+.cr-bottom {
+  bottom: 20px;
+}
+
+#workarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1a3e;
+  font-family: Raleway;
+}
+
+#personal {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 15px;
+  right: 2%;
+}
+/*    start code for the actual button:         */
+
+/*   
+    Spot is the span on the inside of the href that
+    fills the parent and makes the hover and link work
+    for the entire div
+*/
+
+.spot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/*
+    This is the outer svg wrapper that the SVG itself will 
+    fill. Multiple svg-wrapper classes can be put side by side.
+*/
+
+.svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  /*make sure to use same height/width as in the html*/
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/*
+  This is where we define the fill, color, thickness,
+  and stroke pattern of the SVG when there is no hover.
+  The dasharray and offset together define the line position
+  under the words. Here's also where the transition speed is set.
+*/
+
+#shape {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #009ffd;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
+}
+/* 
+    Pushing the text up into the SVG. Without this the
+    text would be below the div's.
+*/
+
+#text {
+  margin-top: -35px;
+  text-align: center;
+}
+
+#text a {
+  color: black;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.1em;
+}
+/* 
+    Changing the shape on hover. I change the color of the stroke,
+make it thinner, then set it to again wrap around the entire parent element.
+*/
+
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #06d6a0;
 }

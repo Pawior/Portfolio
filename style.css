@@ -1,7 +1,8 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Monda', sans-serif;
+  font-family: "Monda", sans-serif;
+  overflow-x: hidden;
 }
 
 section {
@@ -138,7 +139,8 @@ section img {
 }
 
 @-webkit-keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     border-right: 2px solid transparent;
   }
   50% {
@@ -147,7 +149,8 @@ section img {
 }
 
 @keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     border-right: 2px solid transparent;
   }
   50% {
@@ -204,14 +207,122 @@ article .animated {
       -ms-flex-align: center;
           align-items: center;
   font-size: 15vh;
-  font-family: 'Monda', sans-serif;
-  color: #EBDD21;
+  font-family: "Monda", sans-serif;
+  color: #ebdd21;
   font-weight: 700;
 }
 
 .projects {
   width: 100vw;
   height: 70vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.projects .weatherProject {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("img/previewWeather.png");
+  background-size: cover;
+  width: 40%;
+  height: 80%;
+  border: 2px solid #444044;
+  position: relative;
+}
+
+.projects .weatherProject .overlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background: #ebdd21;
+}
+
+.projects .weatherProject .overlay .divbuttonPlayer a .buttonPlayer {
+  background: #032c3b;
+}
+
+.projects .weatherProject .overlay .textPlayer {
+  padding: auto;
+  text-align: center;
+}
+
+.projects .weatherProject:hover .overlay {
+  opacity: 1;
+}
+
+.projects .playerProject {
+  background-image: url("img/previewPlayer.png");
+  background-size: cover;
+  width: 40%;
+  height: 80%;
+  border: 2px solid #444044;
+  position: relative;
+}
+
+.projects .playerProject .overlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background: #ebdd21;
+}
+
+.projects .playerProject .overlay .divbuttonPlayer a .buttonPlayer {
+  background: #032c3b;
+}
+
+.projects .playerProject .overlay .textPlayer {
+  padding: auto;
+  text-align: center;
+}
+
+.projects .playerProject:hover .overlay {
+  opacity: 1;
 }
 
 .contact {
@@ -294,5 +405,132 @@ article .animated {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+.cr {
+  width: 200px;
+  padding: 0px;
+  position: absolute;
+  text-align: center;
+  color: #f0f0f0;
+  z-index: 10;
+}
+
+.cr p {
+  color: black;
+  margin: 0;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.cr-bottom.cr-right {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.cr-bottom.cr-left {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.cr-black {
+  background-color: lightblue;
+}
+
+.cr-right {
+  right: -50px;
+}
+
+.cr-bottom {
+  bottom: 20px;
+}
+
+#workarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1a3e;
+  font-family: Raleway;
+}
+
+#personal {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 15px;
+  right: 2%;
+}
+
+/*    start code for the actual button:         */
+/*   
+    Spot is the span on the inside of the href that
+    fills the parent and makes the hover and link work
+    for the entire div
+*/
+.spot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*
+    This is the outer svg wrapper that the SVG itself will 
+    fill. Multiple svg-wrapper classes can be put side by side.
+*/
+.svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  /*make sure to use same height/width as in the html*/
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*
+  This is where we define the fill, color, thickness,
+  and stroke pattern of the SVG when there is no hover.
+  The dasharray and offset together define the line position
+  under the words. Here's also where the transition speed is set.
+*/
+#shape {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #009ffd;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+/* 
+    Pushing the text up into the SVG. Without this the
+    text would be below the div's.
+*/
+#text {
+  margin-top: -35px;
+  text-align: center;
+}
+
+#text a {
+  color: black;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.1em;
+}
+
+/* 
+    Changing the shape on hover. I change the color of the stroke,
+make it thinner, then set it to again wrap around the entire parent element.
+*/
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #06d6a0;
 }
 /*# sourceMappingURL=style.css.map */
