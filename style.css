@@ -161,7 +161,6 @@ section img {
 article {
   width: 100vw;
   height: 40vh;
-  z-index: 3;
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -173,15 +172,29 @@ article {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 article .desc {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   font-size: 3vh;
   text-align: center;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  display: block;
   visibility: hidden;
   white-space: nowrap;
   overflow: hidden;
+  word-break: break-all;
 }
 
 article .animated {
@@ -269,7 +282,7 @@ article .animated {
 }
 
 .projects .weatherProject .overlay .textPlayer {
-  padding: auto;
+  padding: 5%;
   text-align: center;
 }
 
@@ -317,7 +330,7 @@ article .animated {
 }
 
 .projects .playerProject .overlay .textPlayer {
-  padding: auto;
+  padding: 5%;
   text-align: center;
 }
 
@@ -542,6 +555,9 @@ make it thinner, then set it to again wrap around the entire parent element.
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mailDiv .mail {
@@ -564,7 +580,22 @@ make it thinner, then set it to again wrap around the entire parent element.
           animation: typing 1s 0s steps(22, start) forwards, blink 1s 0s steps(25, end) forwards;
 }
 
-@media screen and (max-width: 1200px) {
+@media only screen and (max-width: 1600px) {
+  section {
+    height: 100vh;
+  }
+  section .bottom {
+    height: 90vw;
+    top: -15vh;
+    background-size: 200%;
+  }
+  section .sky {
+    height: 100vh;
+    background-size: 250%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
   .bottom {
     background-repeat: no-repeat;
     height: 60vh;
@@ -578,6 +609,96 @@ make it thinner, then set it to again wrap around the entire parent element.
   }
   .mail {
     font-size: 1.5rem !important;
+  }
+  section {
+    height: 100vh;
+  }
+  section .bottom {
+    height: 60vw;
+    top: 10vh;
+    background-size: 200%;
+  }
+  section .sky {
+    height: 100vh;
+    background-size: 350%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 140vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 50px;
+  }
+  .weatherProject,
+  .playerProject {
+    width: 80% !important;
+  }
+  .contact {
+    height: 100vh;
+    margin-top: 8rem;
+  }
+  .contact .contactContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #photo img {
+    width: 50%;
+  }
+  article {
+    margin: auto;
+  }
+  article .desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 5vw;
+    height: 200px;
+  }
+  article .desc p {
+    white-space: normal !important;
+    width: 80vw;
+  }
+  section {
+    height: 100vh;
+  }
+  section .bottom {
+    height: 60vw;
+    top: 10vh;
+    background-size: 200%;
+  }
+  section .sky {
+    height: 100vh;
+    background-size: 350%;
+  }
+  .parallax {
+    font-size: 21vw;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  section {
+    height: 95vh;
+  }
+  section .bottom {
+    height: 80vw;
+    top: 6vh;
+    background-size: 250%;
+  }
+  section .sky {
+    height: 100vh;
+    background-size: 400%;
   }
 }
 /*# sourceMappingURL=style.css.map */

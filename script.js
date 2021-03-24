@@ -102,25 +102,3 @@ mailDiv.addEventListener("click", () => {
   mailInput.classList.add("animated2");
   mailInput.style.visibility = "visible";
 });
-
-// NIEUDANE NIE ZATRZYMANIE ANIMACJI HOVER
-
-// let adding = document.getElementsByClassName('fas');
-
-// for (let j = 0; j <= adding.length; j++) {
-//   adding[j].addEventListener('animationend', function(e) {
-//     adding[j].classList.remove('biggerClass');
-//   });
-
-//  adding[j].addEventListener('mouseover', function(e) {
-//    adding[j].classList.add('biggerClass')
-//  })
-// }
-
-// $("i").bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
-//     $(this).removeClass("biggerClass")
-//   })
-
-//   $("i").hover(function(){
-//     $(this).addClass("biggerClass");
-//   })
