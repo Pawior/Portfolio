@@ -131,10 +131,8 @@ article {
   hyphens: auto;
   flex-wrap: nowrap;
 
-  // background: linear-gradient(to bottom, #0a2a43, transparent);
   .desc {
     flex-wrap: nowrap;
-    // font-family: 'Nanum Pen Script', cursive;
     width: 100%;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -142,10 +140,7 @@ article {
     text-align: center;
     hyphens: auto;
     display: block;
-    // animation: typing 5s 1s steps(62,start) forwards,
-    // blink 4s forwards;
     visibility: hidden;
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
     white-space: nowrap;
     overflow: hidden;
     word-break: break-all;
@@ -171,10 +166,7 @@ article {
   align-items: center;
   font-size: 15vh;
   font-family: "Monda", sans-serif;
-  // color: rgb(206, 160, 35);
   color: #ebdd21;
-  // color: #5EFC8D;
-  // color: #E2C044;
   font-weight: 700;
 }
 .projects {
@@ -263,9 +255,6 @@ article {
     &:hover .overlay {
       opacity: 1;
     }
-    // &:hover .cr {
-    //   opacity: 0;
-    // }
   }
 }
 
@@ -367,13 +356,6 @@ article {
   bottom: 15px;
   right: 2%;
 }
-/*    start code for the actual button:         */
-
-/*   
-    Spot is the span on the inside of the href that
-    fills the parent and makes the hover and link work
-    for the entire div
-*/
 
 .spot {
   position: absolute;
@@ -382,28 +364,17 @@ article {
   top: 0;
   left: 0;
 }
-/*
-    This is the outer svg wrapper that the SVG itself will 
-    fill. Multiple svg-wrapper classes can be put side by side.
-*/
 
 .svg-wrapper {
   margin-top: 0;
   position: relative;
   width: 150px;
-  /*make sure to use same height/width as in the html*/
   height: 40px;
   display: inline-block;
   border-radius: 3px;
   margin-left: 5px;
   margin-right: 5px;
 }
-/*
-  This is where we define the fill, color, thickness,
-  and stroke pattern of the SVG when there is no hover.
-  The dasharray and offset together define the line position
-  under the words. Here's also where the transition speed is set.
-*/
 
 #shape {
   stroke-width: 6px;
@@ -413,10 +384,6 @@ article {
   stroke-dashoffset: -220;
   transition: 1s all ease;
 }
-/* 
-    Pushing the text up into the SVG. Without this the
-    text would be below the div's.
-*/
 
 #text {
   margin-top: -35px;
@@ -429,10 +396,6 @@ article {
   font-weight: 100;
   font-size: 1.1em;
 }
-/* 
-    Changing the shape on hover. I change the color of the stroke,
-make it thinner, then set it to again wrap around the entire parent element.
-*/
 
 .svg-wrapper:hover #shape {
   stroke-dasharray: 50 0;
@@ -537,9 +500,6 @@ make it thinner, then set it to again wrap around the entire parent element.
         white-space: normal !important;
         width: 80vw;
       }
-    }
-    .animated {
-      // animation: none;
     }
   }
   section {
