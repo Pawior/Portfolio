@@ -288,10 +288,13 @@ article {
     i {
       color: #495559;
       font-size: 30vh;
+      transition: 0.5s all ease;
+      cursor: pointer;
     }
 
     i:hover {
-      animation: bigger 1s 0s 1 normal forwards;
+      transform: scale(1.2);
+      // animation: bigger 1s 0s 1 normal forwards;
     }
   }
 }
@@ -407,13 +410,18 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: visible;
   .mail {
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     text-align: center;
     align-self: center;
     visibility: hidden;
     white-space: nowrap;
     overflow: hidden;
+    position: absolute;
+    bottom: -1.5rem;
+    overflow-wrap: break-word;
   }
 }
 .mailText {

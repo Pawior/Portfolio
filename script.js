@@ -37,7 +37,6 @@ window.addEventListener("scroll", function () {
 //     }
 // });
 
-//var elem = document.querySelector('#photo');
 //var element_position = $(elem).offset().top;
 var element_position = document.querySelector("#photo").offsetTop;
 var screen_height = $(window).height();
@@ -45,8 +44,6 @@ var activation_offset = 0.4; //determines how far up the the page the element ne
 var activation_point = element_position - screen_height * activation_offset;
 var max_scroll_height = $("body").height() - screen_height - 5; //-5 for a little bit of buffer
 
-//Does something when user scrolls to it OR
-//Does it when user has reached the bottom of the page and hasn't triggered the function yet
 let i = 0;
 $(window).on("scroll", function () {
   var y_scroll_pos = window.pageYOffset;
@@ -65,40 +62,14 @@ $(window).on("scroll", function () {
 });
 
 var canvas = document.getElementById("canvas");
-// var ctx = canvas.getContext("2d");
-
-// function drawLine(x1, y1, x2, y2, ratio) {
-//   ctx.fillRect(0, 0, 300, 300);
-//   ctx.beginPath();
-//   ctx.moveTo(x1, y1);
-//   x2 = x1 + ratio * (x2 - x1);
-//   y2 = y1 + ratio * (y2 - y1);
-//   ctx.lineTo(x2, y2);
-//   ctx.stroke();
-//   ctx.fillStyle = "green";
-//   ctx.fillRect(20, 10, 150, 100);
-//   ctx.closePath();
-
-//   // And if we intend to start new things after
-//   // this, and this is part of an outline,
-//   // we probably also want a ctx.closePath()
-// }
-
-// function animate(ratio) {
-//   ratio = ratio || 0;
-//   drawLine(0, 0, 300, 300, ratio);
-//   if (ratio < 1) {
-//     requestAnimationFrame(function () {
-//       animate(ratio + 0.01);
-//     });
-//   }
-// }
 
 // animate();
 const mailDiv = document.querySelector(".mailDiv");
 const mailInput = document.querySelector(".mail");
 mailDiv.addEventListener("click", () => {
-  // mailInput.classList.add("mailText");
   mailInput.classList.add("animated2");
   mailInput.style.visibility = "visible";
+  setTimeout(() => {
+    mailInput.style.overflow = "visible";
+  }, 1001);
 });
